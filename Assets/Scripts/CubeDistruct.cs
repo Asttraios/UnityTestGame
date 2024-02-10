@@ -20,7 +20,6 @@ public class CubeDistruct : MonoBehaviour
     protected int maxLifeCount = 5;
 
 
-
     virtual protected void Start()
     {
         lifeCount = Mathf.Clamp(lifeCount, 5, maxLifeCount);        //czy to jest potrzebne?
@@ -32,18 +31,13 @@ public class CubeDistruct : MonoBehaviour
         destructCubePhysMat.bounciness = 0.05f;
 
         
-
         if(isRigidBody)
         {
             destructCubeRigid = gameObject.AddComponent<Rigidbody>();
             destructCubeRigid.mass = 0.1f;
             destructCubeRigid.interpolation = RigidbodyInterpolation.Interpolate;
             destructCubeRigid.collisionDetectionMode = CollisionDetectionMode.Continuous;
-
         }
-     
-
-
     }
 
     // Update is called once per frame
